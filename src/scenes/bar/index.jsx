@@ -1,13 +1,15 @@
-import React from "react";
-import Header from "../../components/Header";
-import { Box } from "@mui/material";
+import {Box} from "@mui/material"
+import Header from '../../components/Header'
+import BarChart from "../../components/BarChart";
+
 const Bar = () => {
   return (
     <Box m="20px">
-      <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="BAR" subtitle="Welcome to your dashboard" />
+      <Header title="Bar Chart" subtitle="Simple Bar Chart"/>
+      <Box height="75vh">
+        <BarChart/>
       </Box>
     </Box>
-  );
-};
+  )
+}
 export default Bar;

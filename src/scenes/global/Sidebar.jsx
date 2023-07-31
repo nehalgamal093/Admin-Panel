@@ -137,7 +137,7 @@ const SidebarMenu = () => {
             <Typography
               variant="h6"
               color={colors.grey}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "15px 0 5px 20px",display:isCollapsed?"none":"block" }}
             >
               Data
             </Typography>
@@ -165,7 +165,7 @@ const SidebarMenu = () => {
             <Typography
               variant="h6"
               color={colors.grey}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "15px 0 5px 20px" ,display:isCollapsed?"none":"block"}}
             >
               Pages
             </Typography>
@@ -193,7 +193,7 @@ const SidebarMenu = () => {
             <Typography
               variant="h6"
               color={colors.grey}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "15px 0 5px 20px",display:isCollapsed?"none":"block" }}
             >
               Charts
             </Typography>
