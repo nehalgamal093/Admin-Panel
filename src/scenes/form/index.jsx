@@ -152,4 +152,3 @@ const initialValues = {
     address2: yup.string().required("required"),
   });
 export default Form;
-//2:21:30
