@@ -50,12 +50,13 @@ const SidebarMenu = () => {
         collapsed={isCollapsed}
         backgroundColor="#23243A"
         style={{
-          height: "100vh",
+          height: "100%",
           border: "none",
         }}
         transitionDuration={800}
       >
         <Menu
+      
           iconShape="square"
           menuItemStyles={{
             button: ({ level }) => {
@@ -231,4 +232,3 @@ const SidebarMenu = () => {
   );
 };
 export default SidebarMenu;
-//1:41:35
