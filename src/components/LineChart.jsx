@@ -58,9 +58,10 @@ const LineChart = ({isDashboard =false}) => (
         axisRight={null}
         axisBottom={{
             tickSize: 5,
+
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'white',
+            legend:isDashboard? undefined:  'transportation',
             legendOffset: 36,
             legendPosition: 'middle',
         
@@ -68,8 +69,9 @@ const LineChart = ({isDashboard =false}) => (
         axisLeft={{
             tickSize: 5,
             tickPadding: 5,
+            tickValues:5,
             tickRotation: 0,
-            legend: 'count',
+            legend: isDashboard? undefined :'count',
             legendOffset: -40,
             legendPosition: 'middle'
         }}
