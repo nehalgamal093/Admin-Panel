@@ -10,13 +10,13 @@ import TrafficIcon from "@mui/icons-material/Traffic";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import LineChart from '../../components/LineChart'
 import BarChart from '../../components/BarChart'
-import PieChart from '../../components/PieChart'
 import GeographyChart from '../../components/GeographyChart'
 import StatBox from '../../components/StatBox'
 import ProgressCircle from '../../components/ProgressCircle'
 
 
 const Dashboard = () => {
+
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -245,33 +245,33 @@ const Dashboard = () => {
         </Box>
         {/** */}
 
-         <Box
+        <Box
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
-     
+
         >
-          <Typography variant="h5" fontWeight="600" sx={{p:"30px 30px 0 30px"}}>
+          <Typography variant="h5" fontWeight="600" sx={{ p: "30px 30px 0 30px" }}>
             Sales Quantity
           </Typography>
           <Box height="250px" mt="-20px">
-          <BarChart isDashboard={true}/>
+            <BarChart isDashboard={true} />
           </Box>
-          
+
         </Box>
         <Box
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
-            p="30px"
+          p="30px"
         >
-          <Typography variant="h5" fontWeight="600" sx={{mb:"15 px"}}>
+          <Typography variant="h5" fontWeight="600" sx={{ mb: "15 px" }}>
             Geography Based Traffic
           </Typography>
           <Box height="200px">
-          <GeographyChart isDashboard={true}/>
+            <GeographyChart isDashboard={true} />
           </Box>
-          
+
         </Box>
       </Box>
     </Box>

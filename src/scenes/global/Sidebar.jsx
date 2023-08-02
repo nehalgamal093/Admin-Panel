@@ -20,22 +20,29 @@ import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
+
   return (
-    <MenuItem
-      active={selected === title}
-      style={{
-        color: colors.grey[100],
-        background: selected === title ? "#335B8C" : "transparent",
-        borderRadius: selected === title ? "8px" : "0",
-        margin: "4px",
-      }}
-      onClick={() => setSelected(title)}
-      icon={icon}
-    >
-      <Link to={to} style={{ textDecoration: "none", color: colors.grey[100] }}>
+    <Link to={to} style={{ textDecoration: "none", color: colors.grey[100] }}>
+      <MenuItem
+        active={selected === title}
+        style={{
+          color: colors.grey[100],
+          background: selected === title ? "#335B8C" : "transparent",
+          borderRadius: selected === title ? "8px" : "0",
+          margin: "4px",
+        }}
+        onClick={() => {
+          setSelected(title);
+
+        }}
+        icon={icon}
+      >
+
         <Typography>{title}</Typography>
-      </Link>
-    </MenuItem>
+
+      </MenuItem>
+    </Link>
   );
 };
 const SidebarMenu = () => {
@@ -48,15 +55,15 @@ const SidebarMenu = () => {
     <Box>
       <Sidebar
         collapsed={isCollapsed}
-        backgroundColor="#23243A"
+        backgroundColor={colors.primary[400]}
         style={{
-          height: "100%",
+
           border: "none",
         }}
         transitionDuration={800}
       >
         <Menu
-      
+
           iconShape="square"
           menuItemStyles={{
             button: ({ level }) => {
@@ -137,7 +144,7 @@ const SidebarMenu = () => {
             <Typography
               variant="h6"
               color={colors.grey}
-              sx={{ m: "15px 0 5px 20px",display:isCollapsed?"none":"block" }}
+              sx={{ m: "15px 0 5px 20px", display: isCollapsed ? "none" : "block" }}
             >
               Data
             </Typography>
@@ -165,7 +172,7 @@ const SidebarMenu = () => {
             <Typography
               variant="h6"
               color={colors.grey}
-              sx={{ m: "15px 0 5px 20px" ,display:isCollapsed?"none":"block"}}
+              sx={{ m: "15px 0 5px 20px", display: isCollapsed ? "none" : "block" }}
             >
               Pages
             </Typography>
@@ -193,7 +200,7 @@ const SidebarMenu = () => {
             <Typography
               variant="h6"
               color={colors.grey}
-              sx={{ m: "15px 0 5px 20px",display:isCollapsed?"none":"block" }}
+              sx={{ m: "15px 0 5px 20px", display: isCollapsed ? "none" : "block" }}
             >
               Charts
             </Typography>
